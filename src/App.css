@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+.logo {
+  width: 90px;
+}
+
+.cart{
+  width: 40px;
+}
+
+.badge{
+  width: 50px;
+}
+
+.ItemListContainer{
+  font-size: 30px;
+  text-align: center;  
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
