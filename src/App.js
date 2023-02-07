@@ -1,18 +1,18 @@
-import React from "react";
-import Navbar from "./components/NavBar/NavBar";
 import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css"
-import ItemListContainer from "./components/NavBar/ItemListContainer";
-
-
+import ItemDetailContainer from './components/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <ItemListContainer greetings={"Bienvenido"} />
-    </div>
-  );
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<ItemListContainer />}></Route>
+          <Route path="/item/:itemId" element={<ItemDetailContainer />}></Route>
+          <Route path="/category/:categoryId" element={<ItemListContainer />}></Route>
+        </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App
+export default App;
